@@ -31,3 +31,10 @@ python numpy_examples.py
 
 Open `index.html` in a browser to view the welcome page.
 Click "Run Code" to go to the interactive page and execute Python code directly in the browser.
+
+## GitHub Pages
+
+This repository includes a GitHub Actions workflow to publish the website automatically from the `main` branch.
+Once the workflow runs, the site will be available at:
+
+`https://vamsigavara-png.github.io/numpy/`
