@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Run NumPy Code | VAMSI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">VAMSI</div>
+      <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="run.html" class="nav-link active">Run Code</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container code-page">
+    <section class="code-intro">
+      <h1>Interactive Python Code Runner</h1>
+      <p>Enter Python code below and press <strong>Run</strong> to execute it in the browser using NumPy.</p>
+      <div class="status-bar" id="status">Loading Python runtime…</div>
+    </section>
+
+    <section class="code-editor">
+      <label for="codeInput">Your code</label>
+      <textarea id="codeInput" rows="14">import numpy as np
+
+array = np.array([1, 2, 3, 4])
+print("Array:", array)
+print("Mean:", np.mean(array))
+</textarea>
+      <button id="runButton" class="primary-button">Run Code</button>
+    </section>
+
+    <section class="output-panel">
+      <div class="output-header">
+        <h2>Output</h2>
+        <button id="clearButton" class="secondary-button">Clear</button>
+      </div>
+      <pre id="outputArea" class="output-area">Waiting for runtime...</pre>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Code runner powered by Pyodide.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
